@@ -1,0 +1,17 @@
+.quick-link {
+  border: 2px solid;
+  border-color: var(--grey);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 300px;
+}
+
+.quick-link * {
+  color: var(--light);
+}
+
+.quick-link h4 {
+  color: var(--grey);
+}

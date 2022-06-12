@@ -1,0 +1,152 @@
+.home .hero {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(
+    45deg,
+    var(--xiketic),
+    var(--xiketic),
+    var(--xiketic-light)
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.home .hero .content {
+  color: var(--light);
+}
+
+.home .hero .img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+    45deg,
+    var(--xiketic-light),
+    var(--xiketic-vlight2)
+  );
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.home .hero .img img {
+  width: 200px;
+  height: auto;
+  transition: all 0.2s;
+}
+
+.home .hero .img .hello {
+  color: var(--light);
+  background-color: var(--accent);
+  padding: 3px 17px 3px 17px;
+  width: max-content;
+  border-radius: 20px;
+  align-self: flex-start;
+  margin-right: 150px;
+  transition: transform 0.2s;
+  position: absolute;
+}
+
+.home .hero .img .about {
+  align-self: flex-end;
+  color: var(--xiketic-light);
+  background-color: var(--light);
+  padding: 3px 17px 3px 17px;
+  width: max-content;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px black;
+}
+
+.home .hero .profile {
+  display: flex;
+  align-items: center;
+}
+
+.home .hero .profile .img,
+.home .hero .profile .content {
+  margin: 0 20px 0 20px;
+}
+
+.home .hero .socials {
+  margin-top: 15px;
+}
+
+.home .hero .socials .icon {
+  font-size: 35px;
+  margin-right: 10px;
+  transition: all 0.2s ease;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.home .hero .socials .icon:hover {
+  color: var(--accent);
+  transform: translateY(-5px) scale(1.1);
+}
+
+.home .quick-links {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.home .quick-links .col {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.home .quick-links .col .quick-link {
+  margin-top: 20px;
+}
+
+.home .quick-links .wrapper {
+  position: relative;
+}
+
+.home .quick-links .notif {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    90deg,
+    var(--xiketic-vlight2),
+    var(--accent)
+  );
+  width: 30px;
+  height: 30px;
+  transform: translateX(-10px) translateY(-10px);
+  border-radius: 100px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  justify-content: center;
+  transition: opacity 0.3s;
+}
+
+.home .quick-links .notif .icon {
+  color: var(--light);
+}
+
+@media only screen and (max-width: 700px) {
+  .home .hero {
+    padding: 50px 50px 0 50px;
+  }
+  .home .hero .profile {
+    flex-direction: column;
+  }
+  .home .hero .profile .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .home .quick-links {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+}
