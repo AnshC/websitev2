@@ -1,5 +1,6 @@
 import "./styles.css";
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom"
 import {
   FaInstagram,
   FaGithubSquare,
@@ -9,7 +10,9 @@ import {
 import { BsFillCameraFill, BsTextParagraph } from "react-icons/bs";
 import { SiAdobephotoshop } from "react-icons/si";
 import QuickLink from "./components/QuickLink";
+import { useEffect } from "react";
 export default function Home() {
+  const routeTo = useNavigate()
   const [bgState, setBgState] = useState({ transform: "scale(1)" });
   const [imgState, setImgState] = useState({
     transform: "scale(1) rotate(0deg)",
@@ -17,17 +20,22 @@ export default function Home() {
   const [msgState, setMsgState] = useState({
     transform: "scale(1) rotate(0deg)",
   });
+  const [pageLoaded, setPageLoaded] = useState(false)
   const [msg, setMsg] = useState("Hello!");
   const [wNotif, setWNotif] = useState(0);
   const [dNotif, setDNotif] = useState(0);
   const [rNotif, setRNotif] = useState(0);
   const [pNotif, setPNotif] = useState(0);
+  useEffect(()=>{
+      setPageLoaded(true)
+  }, [])
   return (
-    <div className="home">
+    <div className={pageLoaded ? "home-page visible" : "hidden"}>
       <div className="hero">
         <div className="profile">
           <div
             className="img"
+            onClick={(()=>{routeTo('/about')})}
             onMouseEnter={() => {
               setBgState({
                 transform: "scale(0.9)",
@@ -65,10 +73,14 @@ export default function Home() {
           </div>
           <div className="content">
             <h1 className="bold">Ansh Chauhan</h1>
-            <p className="bio medium">Web Dev & Coffee.</p>
+            <p className="bio medium">Web Dev & <span><Link to="/coffee">Coffee.</Link></span></p>
             <div className="socials">
-              <FaInstagram className="icon" />
-              <FaGithubSquare className="icon" />
+              <a href="https://instagram.com/ansh.c05">
+                <FaInstagram className="icon" />
+              </a>
+              <a href="https://github.com/AnshC">
+                <FaGithubSquare className="icon" />
+              </a>
               <FaEnvelope className="icon" />
             </div>
           </div>
@@ -83,6 +95,7 @@ export default function Home() {
               onMouseLeave={() => {
                 setWNotif(0);
               }}
+              onClick={(()=>{routeTo('/www')})}
             >
               <div className="notif" style={{ opacity: wNotif }}>
                 <FaCode className="icon" />
@@ -119,6 +132,7 @@ export default function Home() {
               onMouseLeave={() => {
                 setRNotif(0);
               }}
+              onClick={(()=>{routeTo('/resume')})}
             >
               <div className="notif" style={{ opacity: rNotif }}>
                 <BsTextParagraph className="icon" />

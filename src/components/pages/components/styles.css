@@ -1,7 +1,7 @@
 .quick-link {
   border: 2px solid;
   border-color: var(--grey);
-  border-radius: 20px;
+  border-radius: 13px;
   padding: 20px;
   cursor: pointer;
   transition: all 0.2s;

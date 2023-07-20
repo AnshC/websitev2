@@ -1,0 +1,30 @@
+{
+    "webdev":{
+        "projects": [
+            {
+                "name": "anshc.co",
+                "description": "My Personal Website Portfolio Project.",
+                "github": "https://github.com/AnshC/websitev2",
+                "link": "https://anshc.co"
+            },
+            {
+                "name": "wwirn.glitch.me",
+                "description": "A web application based off node.js that tells you when it will rain next.",
+                "github": "https://github.com",
+                "link": "https://wwirn.glitch.me"
+            },
+            {
+                "name": "nextrainfall.glitch.me",
+                "description": "wwwirn.glitch.me v2.0, more secure and overall - better.",
+                "github": "https://github.com",
+                "link": "https://nextrainfall.glitch.me"
+            },
+            {
+                "name": "pacificsparkles",
+                "description": "A website for a local handmade soap business",
+                "github": "https://github.com/AnshC/websitev2",
+                "link": "https://anshc.co"
+            }
+        ]
+    }
+}
